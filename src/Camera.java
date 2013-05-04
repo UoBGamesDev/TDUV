@@ -9,7 +9,16 @@ public abstract class Camera {
 		return currentCamera;
 	}
 	
+	public static void setCurrentCamera(Camera currentCamera) {
+		Camera.currentCamera = currentCamera;
+	}
+	
 	
 	public abstract Rectangle getPosition();
+
+
+	
+	
+	
 	
 }

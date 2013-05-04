@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 
 public class Renderer {
 
-	private static PriorityQueue<DrawingInstruction> drawingQueue = new PriorityQueue<DrawingInstruction>(0, new Comparator<DrawingInstruction>() {
+	private static PriorityQueue<DrawingInstruction> drawingQueue = new PriorityQueue<DrawingInstruction>(1, new Comparator<DrawingInstruction>() {
 
 		@Override
 		public int compare(DrawingInstruction drawing, DrawingInstruction other) {
@@ -29,12 +29,15 @@ public class Renderer {
 	 * 
 	 * I've given it a scary name to deter people from calling it
 	 */
-	public static void flushRenderCache(EntityManager entityManager)
+	public static void flushRenderCache()
 	{
+		
+		
 		Rectangle camera = Camera.getCurrentCamera().getPosition();
 		
 		while(!drawingQueue.isEmpty())
 		{
+			
 			//POP POP POP POP
 			DrawingInstruction drawingInstructions = drawingQueue.remove();
 			

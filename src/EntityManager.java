@@ -14,7 +14,6 @@ public class EntityManager {
 			entity.update(gc, delta);
 		}
 		
-		Renderer.flushRenderCache(this);
 	}
 	
 	public void addEntity(Entity entity)

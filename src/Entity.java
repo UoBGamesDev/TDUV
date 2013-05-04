@@ -14,7 +14,7 @@ public abstract class Entity {
 	
 	protected List<Component>components = new LinkedList<Component>();
 	
-	private Rectangle position = null;
+	protected Rectangle position = null;
 	
 	
 	protected void add(Component c) {

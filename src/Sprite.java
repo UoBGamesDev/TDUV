@@ -19,8 +19,9 @@ public class Sprite implements IDrawable {
 	
 	@Override
 	public void render(Rectangle position) {
+		System.out.println(position);
 		
-		image.draw(position.x, position.y, position.width, position.height);
+		image.draw(position.x, position.y);
 	}
 
 }
