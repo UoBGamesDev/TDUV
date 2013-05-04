@@ -2,6 +2,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Rectangle;
 
 
@@ -21,7 +22,7 @@ public abstract class Entity {
 		components.add(c);
 	}
 	
-	public void update(GameContainer gc, int delta)
+	public void update(GameContainer gc, int delta) throws SlickException
 	{
 		for(Component c : components)
 		{
@@ -41,6 +42,21 @@ public abstract class Entity {
 
 	public void setPosition(Rectangle position) {
 		this.position = position;
+	}
+	
+	//Please feel free to tidy this up if you can find a work around for Type Erasure
+	@SuppressWarnings("unchecked")
+	public <T> T getComponent(Class<T> componentType) throws SlickException
+	{	
+		for(Component c : components)
+		{
+			if(c.getClass() == componentType)
+			{
+				return (T) c;
+			}
+		}
+		
+		throw new SlickException("No component of type " + componentType + "found in " + this.getClass());
 	}
 	
 }

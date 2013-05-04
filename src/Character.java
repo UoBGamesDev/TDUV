@@ -9,6 +9,9 @@ public class Character extends Entity {
 	public Character() throws SlickException
 	{
 		add(new RenderComponent(this, new Sprite(new Image("contents/circle.png"))));
+		add(new Moveable(this));
+		add(new KeyboardControlComponent(this, 2f));
+		add(new FrictionComponent(this, 0.1f));
 		position = new Rectangle(50, 50, 20, 20);
 	}
 
