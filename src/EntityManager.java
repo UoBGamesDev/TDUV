@@ -6,10 +6,12 @@ import org.newdawn.slick.SlickException;
 
 public class EntityManager {
 
-	private TreeSet<Entity>entities = new TreeSet<Entity>(new EntityComparer());
+	private SortedList<Entity>entities = new SortedList<Entity>(new EntityComparer());
 	
 	public void update(GameContainer gc, int delta) throws SlickException
 	{
+		System.out.println(entities.size());
+		
 		for(Entity entity : entities)
 		{
 			entity.update(gc, delta);

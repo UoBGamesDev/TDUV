@@ -17,8 +17,6 @@ public class Moveable
 	@Override
 	public void update(GameContainer gc, int delta)
 	{
-		System.out.println(velocity);
-		
 		// In C# you can overload operators >_>
 		owner.getPosition().setLocation(owner.getPosition().getX()
 				+ velocity.x, owner.getPosition().getY()

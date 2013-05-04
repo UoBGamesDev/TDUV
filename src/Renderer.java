@@ -38,8 +38,10 @@ public class Renderer {
 		while(!drawingQueue.isEmpty())
 		{
 			
+			
 			//POP POP POP POP
 			DrawingInstruction drawingInstructions = drawingQueue.remove();
+			
 			
 			//BANANA BANANA BANANA
 			//Okay actual comment time .....

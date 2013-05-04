@@ -2,6 +2,7 @@ import java.awt.Rectangle;
 
 import org.lwjgl.opengl.Display;
 import org.newdawn.slick.*;
+import org.newdawn.slick.tiled.TiledMap;
 
 public class Main extends BasicGame {
 
@@ -14,16 +15,14 @@ public class Main extends BasicGame {
 	@Override
 	public void init(GameContainer gc) throws SlickException {
 		entityManager.addEntity(new Character());
+		entityManager.addEntity(new Map(new TiledMap("contents/uniTest.tmx")));
 		Camera.setCurrentCamera(new StaticCamera(new Rectangle(0, 0, 0, 0)));
-		i = new Image("contents/circle.png");
 	}
 
 	@Override
 	public void update(GameContainer gc, int delta) throws SlickException {
 		entityManager.update(gc, delta);
 	}
-
-	private static Image i;
 	
 	@Override
 	public void render(GameContainer gc, Graphics g) throws SlickException {
