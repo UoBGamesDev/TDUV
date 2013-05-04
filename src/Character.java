@@ -1,10 +1,11 @@
 import org.newdawn.slick.Image;
+import org.newdawn.slick.SlickException;
 
 
 public class Character extends Entity {
 
 	//SHRIMP SHRIMP SHRIMP
-	public Character()
+	public Character() throws SlickException
 	{
 		add(new RenderComponent(this, new Sprite(new Image(""))));
 	}

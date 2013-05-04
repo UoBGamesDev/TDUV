@@ -5,7 +5,7 @@ import org.newdawn.slick.GameContainer;
 
 public class EntityManager {
 
-	private TreeSet<Entity>entities = new TreeSet<>(new EntityComparer());
+	private TreeSet<Entity>entities = new TreeSet<Entity>(new EntityComparer());
 	
 	public void update(GameContainer gc, int delta)
 	{
