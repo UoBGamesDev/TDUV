@@ -14,9 +14,13 @@ public class Main extends BasicGame {
 
 	@Override
 	public void init(GameContainer gc) throws SlickException {
-		entityManager.addEntity(new Character());
+		Character c = new Character();
+		
+		entityManager.addEntity(c);
 		entityManager.addEntity(new Map(new TiledMap("contents/uniTest.tmx")));
-		Camera.setCurrentCamera(new StaticCamera(new Rectangle(0, 0, 0, 0)));
+		//Camera.setCurrentCamera(new StaticCamera(new Rectangle(0, 0, 0, 0)));
+		
+		Camera.setCurrentCamera(new FollowCamera(c, new Rectangle(0, 0, gc.getWidth(), gc.getHeight())));
 	}
 
 	@Override

@@ -10,8 +10,6 @@ public class EntityManager {
 	
 	public void update(GameContainer gc, int delta) throws SlickException
 	{
-		System.out.println(entities.size());
-		
 		for(Entity entity : entities)
 		{
 			entity.update(gc, delta);

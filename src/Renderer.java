@@ -48,8 +48,7 @@ public class Renderer {
 			//Object position is where the object is in the world view
 			Rectangle objectPosition = convertToAWTRectangle(drawingInstructions.getPosition());
 			
-			//Draw position is where the object will be drawn on screen once camera is applied
-			Rectangle drawPosition = new Rectangle(objectPosition.x - camera.x, objectPosition.y - camera.y, objectPosition.width, objectPosition.height);
+			Rectangle drawPosition = new Rectangle(objectPosition.x, objectPosition.y, objectPosition.width, objectPosition.height);
 			
 			drawingInstructions.getDrawable().render(drawPosition);
 			
