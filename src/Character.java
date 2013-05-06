@@ -5,7 +5,6 @@ import org.newdawn.slick.geom.Rectangle;
 /**
  * The player, or an enemy. Something that has health and can die.
  * 
- * @author james
  * 
  */
 
@@ -17,7 +16,7 @@ public class Character extends Entity {
 		add(new Moveable(this));
 		add(new KeyboardControlComponent(this, 10f));
 		add(new FrictionComponent(this, 0.1f));
-		position = new Rectangle(0, 0, 20, 20);
+		position = new Rectangle(40, 40, 20, 20);
 	}
 
 	@Override

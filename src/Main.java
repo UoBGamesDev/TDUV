@@ -20,7 +20,7 @@ public class Main extends BasicGame {
 		entityManager.addEntity(new Map(new TiledMap("contents/uniTest.tmx")));
 		//Camera.setCurrentCamera(new StaticCamera(new Rectangle(0, 0, 0, 0)));
 		
-		Camera.setCurrentCamera(new FollowCamera(c, new Rectangle(0, 0, gc.getWidth(), gc.getHeight())));
+		Camera.setCurrentCamera(new StaticCamera(new Rectangle(40, 40, 0, 0)));
 	}
 
 	@Override
