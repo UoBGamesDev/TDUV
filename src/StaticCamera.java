@@ -1,17 +1,17 @@
-import java.awt.Rectangle;
+import java.awt.Point;
 
 
 public class StaticCamera extends Camera {
 
-	private final Rectangle position;
+	private final Point position;
 	
-	public StaticCamera(Rectangle position)
+	public StaticCamera(Point position)
 	{
 		this.position = position;
 	}
 	
 	@Override
-	public Rectangle getPosition() {
+	public Point getPosition() {
 		return position;
 	}
 

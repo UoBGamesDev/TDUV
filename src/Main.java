@@ -1,7 +1,11 @@
-import java.awt.Rectangle;
+import java.awt.Point;
 
 import org.lwjgl.opengl.Display;
-import org.newdawn.slick.*;
+import org.newdawn.slick.AppGameContainer;
+import org.newdawn.slick.BasicGame;
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
+import org.newdawn.slick.SlickException;
 import org.newdawn.slick.tiled.TiledMap;
 
 public class Main extends BasicGame {
@@ -20,7 +24,7 @@ public class Main extends BasicGame {
 		entityManager.addEntity(new Map(new TiledMap("contents/uniTest.tmx")));
 		//Camera.setCurrentCamera(new StaticCamera(new Rectangle(0, 0, 0, 0)));
 		
-		Camera.setCurrentCamera(new StaticCamera(new Rectangle(40, 40, 0, 0)));
+		Camera.setCurrentCamera(new StaticCamera(new Point(0, 0)));
 	}
 
 	@Override

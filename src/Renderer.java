@@ -1,3 +1,4 @@
+import java.awt.Point;
 import java.awt.Rectangle;
 import java.util.Comparator;
 import java.util.PriorityQueue;
@@ -49,7 +50,7 @@ public class Renderer
 	public static void flushRenderCache()
 	{
 
-		Rectangle camera = Camera.getCurrentCamera().getPosition();
+		Point camera = Camera.getCurrentCamera().getPosition();
 		
 		System.out.println(camera.x);
 

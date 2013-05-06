@@ -1,4 +1,4 @@
-import java.awt.Rectangle;
+import java.awt.Point;
 
 public abstract class Camera {
 
@@ -12,6 +12,6 @@ public abstract class Camera {
 		Camera.currentCamera = currentCamera;
 	}
 
-	public abstract Rectangle getPosition();
+	public abstract Point getPosition();
 
 }
