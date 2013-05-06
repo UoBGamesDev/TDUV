@@ -6,6 +6,11 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
+/**
+ * An example of some JUnit
+ * @author Joel Hoskin
+ *
+ */
 public class SortedListTest {
 
 	private SortedList<Entity> createEntityList() {

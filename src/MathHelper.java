@@ -1,0 +1,17 @@
+
+public class MathHelper
+{
+	public static int clamp(int x, int lower, int upper)
+	{
+		if(x < lower)
+		{
+			return lower;
+		}
+		else if(x > upper)
+		{
+			return upper;
+		}
+		
+		return x;
+	}
+}

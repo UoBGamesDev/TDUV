@@ -1,4 +1,5 @@
 import java.awt.Point;
+import java.awt.Rectangle;
 
 import org.lwjgl.opengl.Display;
 import org.newdawn.slick.AppGameContainer;
@@ -21,10 +22,16 @@ public class Main extends BasicGame {
 		Character c = new Character();
 		
 		entityManager.addEntity(c);
-		entityManager.addEntity(new Map(new TiledMap("contents/uniTest.tmx")));
+		
+		TiledMap t = new TiledMap("contents/uniTest.tmx");
+		
+		
+		entityManager.addEntity(new Map(t));
 		//Camera.setCurrentCamera(new StaticCamera(new Rectangle(0, 0, 0, 0)));
 		
-		Camera.setCurrentCamera(new StaticCamera(new Point(0, 0)));
+		
+		//Camera.setCurrentCamera(new StaticCamera(new Point(0, 0)));
+		Camera.setCurrentCamera(new FollowCamera(c, new Rectangle(0,0, gc.getWidth(), gc.getHeight()), new Rectangle(t.getWidth() * t.getTileWidth(), t.getHeight() * t.getTileHeight())));
 	}
 
 	@Override

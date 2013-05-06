@@ -52,7 +52,6 @@ public class Renderer
 
 		Point camera = Camera.getCurrentCamera().getPosition();
 		
-		System.out.println(camera.x);
 
 		while (!drawingQueue.isEmpty())
 		{

@@ -16,7 +16,7 @@ public class Character extends Entity {
 		add(new Moveable(this));
 		add(new KeyboardControlComponent(this, 10f));
 		add(new FrictionComponent(this, 0.1f));
-		position = new Rectangle(40, 40, 20, 20);
+		position = new Rectangle(40, 40, 100, 100);
 	}
 
 	@Override
