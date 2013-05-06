@@ -1,4 +1,3 @@
-//AWT FTW
 import java.awt.Rectangle;
 
 

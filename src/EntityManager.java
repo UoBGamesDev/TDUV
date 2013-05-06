@@ -21,4 +21,9 @@ public class EntityManager {
 	{
 		entities.add(entity);
 	}
+	
+	public void killEntity(Entity entity)
+	{
+		entities.remove(entity);
+	}
 }
