@@ -11,44 +11,44 @@ import org.newdawn.slick.tiled.TiledMap;
 
 public class Main extends BasicGame {
 
-	private EntityManager entityManager = new EntityManager();
-	
-	public Main() {
-		super("Hello World");
-	}
+    private EntityManager entityManager = new EntityManager();
 
-	@Override
-	public void init(GameContainer gc) throws SlickException {
-		Character c = new Character();
-		
-		entityManager.addEntity(c);
-		
-		TiledMap t = new TiledMap("contents/uniTest.tmx");
-		
-		
-		entityManager.addEntity(new Map(t));
-		//Camera.setCurrentCamera(new StaticCamera(new Rectangle(0, 0, 0, 0)));
-		
-		
-		//Camera.setCurrentCamera(new StaticCamera(new Point(0, 0)));
-		Camera.setCurrentCamera(new FollowCamera(c, new Rectangle(0,0, gc.getWidth(), gc.getHeight()), new Rectangle(t.getWidth() * t.getTileWidth(), t.getHeight() * t.getTileHeight())));
-	}
+    public Main() {
+	super("Hello World");
+    }
 
-	@Override
-	public void update(GameContainer gc, int delta) throws SlickException {
-		entityManager.update(gc, delta);
-	}
-	
-	@Override
-	public void render(GameContainer gc, Graphics g) throws SlickException {
-		Display.sync(30);
-		Renderer.flushRenderCache();
-	}
+    @Override
+    public void init(GameContainer gc) throws SlickException {
+	Character c = new Character();
 
-	public static void main(String[] args) throws SlickException {
-		AppGameContainer app = new AppGameContainer(new Main());
+	entityManager.addEntity(c);
 
-		app.setDisplayMode(800, 600, false);
-		app.start();
-	}
+	TiledMap t = new TiledMap("contents/uniTest.tmx");
+
+	entityManager.addEntity(new Map(t));
+	// Camera.setCurrentCamera(new StaticCamera(new Rectangle(0, 0, 0, 0)));
+
+	// Camera.setCurrentCamera(new StaticCamera(new Point(0, 0)));
+	Camera.setCurrentCamera(new FollowCamera(c, new Rectangle(0, 0, gc
+		.getWidth(), gc.getHeight()), new Rectangle(t.getWidth()
+		* t.getTileWidth(), t.getHeight() * t.getTileHeight())));
+    }
+
+    @Override
+    public void update(GameContainer gc, int delta) throws SlickException {
+	entityManager.update(gc, delta);
+    }
+
+    @Override
+    public void render(GameContainer gc, Graphics g) throws SlickException {
+	Display.sync(30);
+	Renderer.flushRenderCache();
+    }
+
+    public static void main(String[] args) throws SlickException {
+	AppGameContainer app = new AppGameContainer(new Main());
+
+	app.setDisplayMode(800, 600, false);
+	app.start();
+    }
 }

@@ -12,25 +12,25 @@ import org.newdawn.slick.geom.Vector2f;
 
 public class FrictionComponent extends Component {
 
-	private float frictionStrength;
+    private float frictionStrength;
 
-	public FrictionComponent(Entity owner, float frictionStrength) {
-		super(owner);
-		this.frictionStrength = frictionStrength;
-	}
+    public FrictionComponent(Entity owner, float frictionStrength) {
+	super(owner);
+	this.frictionStrength = frictionStrength;
+    }
 
-	@Override
-	public void update(GameContainer gc, int delta) throws SlickException {
+    @Override
+    public void update(GameContainer gc, int delta) throws SlickException {
 
-		Moveable moveable = owner.getComponent(Moveable.class);
+	Moveable moveable = owner.getComponent(Moveable.class);
 
-		Vector2f frictionVector = new Vector2f(moveable.getVelocity());
+	Vector2f frictionVector = new Vector2f(moveable.getVelocity());
 
-		frictionVector.x *= frictionStrength;
-		frictionVector.y *= frictionStrength;
+	frictionVector.x *= frictionStrength;
+	frictionVector.y *= frictionStrength;
 
-		moveable.setVelocity(moveable.getVelocity().sub(frictionVector));
+	moveable.setVelocity(moveable.getVelocity().sub(frictionVector));
 
-	}
+    }
 
 }
