@@ -20,7 +20,7 @@ public class MapRender extends Component {
     @Override
     public void update(GameContainer gc, int delta) throws SlickException {
 	Renderer.render(new DrawingInstruction(mapRenderer, new Rectangle(0, 0,
-		0, 0), -1));
+		0, 0), -1, 0));
     }
 
 }

@@ -13,7 +13,7 @@ public class RenderComponent extends Component {
 
     @Override
     public void update(GameContainer gc, int delta) {
-	Renderer.render(new DrawingInstruction(drawable, owner.getPosition(), 0));
+	Renderer.render(new DrawingInstruction(drawable, owner.getPosition(), 0, owner.getRotation()));
     }
 
 }

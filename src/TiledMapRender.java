@@ -20,7 +20,7 @@ public class TiledMapRender implements IDrawable {
      * Feed the position of the world in the topleft corner
      */
     @Override
-    public void render(Rectangle position) {
+    public void render(Rectangle position, float rotation) {
 	map.render(0 + position.x, 0 + position.y);
     }
 

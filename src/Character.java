@@ -16,6 +16,9 @@ public class Character extends Entity {
 	add(new Moveable(this));
 	add(new KeyboardControlComponent(this, 10f));
 	add(new FrictionComponent(this, 0.1f));
+	
+	add(new MouseFacerComponent(this));
+	
 	position = new Rectangle(40, 40, 40, 40);
     }
 

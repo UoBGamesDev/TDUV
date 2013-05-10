@@ -61,7 +61,7 @@ public class Renderer {
 		    objectPosition.y - camera.y, objectPosition.width,
 		    objectPosition.height);
 
-	    drawingInstructions.getDrawable().render(drawPosition);
+	    drawingInstructions.getDrawable().render(drawPosition, drawingInstructions.getRotation());
 	}
     }
 

@@ -18,6 +18,8 @@ public abstract class Entity {
     protected List<Component> components = new LinkedList<Component>();
 
     protected Rectangle position = null;
+    
+    protected float rotation = 0;
 
     protected void add(Component c) {
 	components.add(c);
@@ -42,6 +44,14 @@ public abstract class Entity {
 
     public void setPosition(Rectangle position) {
 	this.position = position;
+    }
+    
+    public float getRotation() {
+	return rotation;
+    }
+    
+    public void setRotation(float rotation) {
+	this.rotation = rotation;
     }
 
     // Please feel free to tidy this up if you can find a work around for Type

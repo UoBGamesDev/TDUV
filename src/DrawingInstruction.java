@@ -12,13 +12,15 @@ public class DrawingInstruction {
 
     private IDrawable drawable;
     private Rectangle position;
+    private float rotation;
     private int priorty;
 
     public DrawingInstruction(IDrawable drawable, Rectangle position,
-	    int priorty) {
+	    int priorty, float rotation) {
 	this.drawable = drawable;
 	this.priorty = priorty;
 	this.position = position;
+	this.rotation = rotation;
     }
 
     public IDrawable getDrawable() {
@@ -31,6 +33,10 @@ public class DrawingInstruction {
 
     public Rectangle getPosition() {
 	return position;
+    }
+    
+    public float getRotation() {
+	return rotation;
     }
 
 }
