@@ -19,8 +19,8 @@ public class MouseFacerComponent extends Component {
 	
 	Vector2f mousePos = new Vector2f(gc.getInput().getMouseX() + cameraPosition.x, gc
 		.getInput().getMouseY() + cameraPosition.y);
-	Vector2f followerPos = new Vector2f(owner.getPosition().getX(), owner
-		.getPosition().getY());
+	Vector2f followerPos = new Vector2f(owner.getPosition().getCenterX(), owner
+		.getPosition().getCenterY());
 
 	double xDiff = mousePos.x - followerPos.x;
         double yDiff = mousePos.y - followerPos.y;
