@@ -11,7 +11,7 @@ import org.newdawn.slick.tiled.TiledMap;
 
 public class Main extends BasicGame {
 
-    private EntityManager entityManager = new EntityManager();
+    private EntityManager entityManager = EntityManager.getEntityManager();
 
     public Main() {
 	super("Hello World");
