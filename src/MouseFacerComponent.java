@@ -24,7 +24,7 @@ public class MouseFacerComponent extends Component {
 
 	double xDiff = mousePos.x - followerPos.x;
         double yDiff = mousePos.y - followerPos.y;
-        owner.setRotation((float) Math.toDegrees(Math.atan2(yDiff, xDiff)) +90);
+        owner.setRotation((float) Math.toDegrees(Math.atan2(yDiff, xDiff)) +90) ;
         
         // System.out.println( Math.toDegrees(Math.atan2(yDiff, xDiff)));
     }

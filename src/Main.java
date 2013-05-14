@@ -19,7 +19,7 @@ public class Main extends BasicGame {
 
     @Override
     public void init(GameContainer gc) throws SlickException {
-	Character c = new Character();
+	Player c = new Player();
 
 	entityManager.addEntity(c);
 
