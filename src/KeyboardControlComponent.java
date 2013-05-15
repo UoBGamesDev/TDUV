@@ -31,21 +31,21 @@ public class KeyboardControlComponent extends Component {
 	Moveable moveable = owner.getComponent(Moveable.class);
 	Vector2f velocity = moveable.getVelocity();
 
-	if (gc.getInput().isKeyDown(Input.KEY_UP)) {
+	if (gc.getInput().isKeyDown(Input.KEY_W)) {
 	    keyPressed = true;
 	    velocity.add(new Vector2f(0, -speed));
 	}
 
-	if (gc.getInput().isKeyDown(Input.KEY_DOWN)) {
+	if (gc.getInput().isKeyDown(Input.KEY_S)) {
 	    keyPressed = true;
 	    velocity.add(new Vector2f(0, speed));
 	}
 
-	if (gc.getInput().isKeyDown(Input.KEY_LEFT)) {
+	if (gc.getInput().isKeyDown(Input.KEY_A)) {
 	    keyPressed = true;
 	    velocity.add(new Vector2f(-speed, 0));
 	}
-	if (gc.getInput().isKeyDown(Input.KEY_RIGHT)) {
+	if (gc.getInput().isKeyDown(Input.KEY_D)) {
 	    keyPressed = true;
 	    velocity.add(new Vector2f(speed, 0));
 	}
