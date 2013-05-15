@@ -6,7 +6,7 @@ import org.newdawn.slick.SlickException;
 import org.newdawn.slick.geom.Vector2f;
 
 /**
- * WASD control of an entity's position. Doesn't stop the entity moving when the
+ * Up, down, left & right control the position of an entity's position. Doesn't stop the entity moving when the
  * keys are let go of, that is handled by FrictionComponent
  * 
  * @author Joel
