@@ -39,4 +39,8 @@ public class EntityManager {
     public static EntityManager getEntityManager() {
 	return entityManager;
     }
+    
+    	public SortedList<Entity> getEntities() {
+		return entities;
+	}
 }
