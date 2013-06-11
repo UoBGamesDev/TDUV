@@ -15,7 +15,7 @@ public class Player extends Entity {
 		"contents/circle.png"))));
 	add(new Moveable(this));
 	add(new KeyboardControlComponent(this, 10f));
-	//add(new FrictionComponent(this, 0.1f));
+	add(new FrictionComponent(this, 0.1f));
 	
 	add(new MouseFacerComponent(this));
 	

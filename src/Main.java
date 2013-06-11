@@ -1,4 +1,3 @@
-import java.awt.Point;
 import java.awt.Rectangle;
 
 import org.lwjgl.opengl.Display;

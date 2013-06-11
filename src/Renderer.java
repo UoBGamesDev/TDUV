@@ -56,6 +56,12 @@ public class Renderer {
 	    // Object position is where the object is in the world view
 	    Rectangle objectPosition = convertToAWTRectangle(drawingInstructions
 		    .getPosition());
+	    
+	    if(drawingInstructions.getDrawable().getClass() == Sprite.class)
+	    {
+	    	System.out.println(Helper.slickRectangleRepresentation(drawingInstructions.getPosition()));
+	    }
+
 
 	    Rectangle drawPosition = new Rectangle(objectPosition.x - camera.x,
 		    objectPosition.y - camera.y, objectPosition.width,
