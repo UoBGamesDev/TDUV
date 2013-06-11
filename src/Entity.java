@@ -33,7 +33,6 @@ public abstract class Entity {
 
     /**
      * Lower numbers are higher priority
-     * 
      * @return
      */
     public abstract int getUpdatePriority();
@@ -56,6 +55,12 @@ public abstract class Entity {
 
     // Please feel free to tidy this up if you can find a work around for Type
     // Erasure
+    /**
+     * Debug Hint: This wont search for subclasses of the class you pass this
+     * @param componentType
+     * @return
+     * @throws SlickException
+     */
     @SuppressWarnings("unchecked")
     public <T> T getComponent(Class<T> componentType) throws SlickException {
 	for (Component c : components) {
@@ -67,5 +72,18 @@ public abstract class Entity {
 	throw new SlickException("No component of type " + componentType
 		+ "found in " + this.getClass());
     }
+    
+    @SuppressWarnings("unchecked")
+    public <T> boolean hasComponent(Class<T> componentType) throws SlickException {
+	for (Component c : components) {
+	    if (c.getClass() == componentType) {
+		return true;
+	    }
+	}
+
+	return false;
+    }
+    
+    
 
 }

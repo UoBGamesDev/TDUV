@@ -1,5 +1,3 @@
-import java.security.acl.Owner;
-
 import org.newdawn.slick.GameContainer;
 
 public class RenderComponent extends Component {

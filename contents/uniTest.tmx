@@ -8,4 +8,53 @@
    eJzdljsOgEAIRNe9/6GtbIxumM8CWtAYMzwmozDHGLN5HWLdNRyal04WH9PHwfek0ck/xSs0f0xWXRlB/WOfu7LH8u3wqAMf0+ev/mXtiQr/EN0v81XlTeVTPY9+D8r9krVL3nZ75P5aMa7eR247tEdEA7kNInlx7EvEEyQHLj6mr6IXzQWzExzzovljPWL3m4tvl3+uyuJT7o9M/5j/Djt3Bp86SwXfzvuqiq9znQvNBdw=
   </data>
  </layer>
+ <objectgroup name="CollisionLayer" width="40" height="30">
+  <object x="0" y="0" width="1600" height="40"/>
+  <object x="1560" y="40" width="40" height="1160"/>
+  <object x="0" y="1160" width="1560" height="80"/>
+  <object x="0" y="40" width="40" height="1120"/>
+  <object x="120" y="200" width="360" height="40"/>
+  <object x="480" y="240" width="40" height="40"/>
+  <object x="240" y="240" width="40" height="280"/>
+  <object x="160" y="640" width="200" height="40"/>
+  <object x="200" y="680" width="40" height="240"/>
+  <object x="360" y="960" width="400" height="40"/>
+  <object x="440" y="1000" width="40" height="160"/>
+  <object x="920" y="880" width="40" height="160"/>
+  <object x="520" y="800" width="440" height="40"/>
+  <object x="880" y="840" width="40" height="80"/>
+  <object x="640" y="840" width="40" height="80"/>
+  <object x="480" y="560" width="80" height="40"/>
+  <object x="520" y="600" width="80" height="40"/>
+  <object x="560" y="640" width="80" height="40"/>
+  <object x="640" y="680" width="80" height="40"/>
+  <object x="680" y="720" width="160" height="40"/>
+  <object x="760" y="760" width="80" height="40"/>
+  <object x="800" y="600" width="40" height="120"/>
+  <object x="760" y="560" width="40" height="80"/>
+  <object x="1040" y="640" width="240" height="40"/>
+  <object x="1200" y="680" width="40" height="80"/>
+  <object x="1160" y="720" width="40" height="80"/>
+  <object x="1280" y="680" width="80" height="40"/>
+  <object x="1400" y="520" width="40" height="80"/>
+  <object x="1440" y="560" width="40" height="40"/>
+  <object x="1520" y="560" width="40" height="40"/>
+  <object x="1240" y="840" width="160" height="40"/>
+  <object x="1240" y="1000" width="280" height="40"/>
+  <object x="1360" y="1040" width="40" height="40"/>
+  <object x="1120" y="1080" width="40" height="80"/>
+  <object x="520" y="400" width="880" height="40"/>
+  <object x="1120" y="440" width="40" height="160"/>
+  <object x="1280" y="280" width="40" height="120"/>
+  <object x="1040" y="320" width="40" height="40"/>
+  <object x="1000" y="240" width="40" height="40"/>
+  <object x="1040" y="80" width="40" height="40"/>
+  <object x="1240" y="160" width="320" height="40"/>
+  <object x="840" y="40" width="40" height="160"/>
+  <object x="680" y="40" width="40" height="120"/>
+  <object x="640" y="120" width="40" height="120"/>
+  <object x="680" y="200" width="40" height="40"/>
+  <object x="720" y="240" width="40" height="40"/>
+  <object x="800" y="240" width="40" height="40"/>
+ </objectgroup>
 </map>

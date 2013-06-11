@@ -26,9 +26,9 @@ public class Main extends BasicGame {
 	TiledMap t = new TiledMap("contents/uniTest.tmx");
 
 	entityManager.addEntity(new Map(t));
-	// Camera.setCurrentCamera(new StaticCamera(new Rectangle(0, 0, 0, 0)));
 
-	// Camera.setCurrentCamera(new StaticCamera(new Point(0, 0)));
+	entityManager.addEntity(new CollisionEntity());
+	
 	Camera.setCurrentCamera(new FollowCamera(c, new Rectangle(0, 0, gc
 		.getWidth(), gc.getHeight()), new Rectangle(t.getWidth()
 		* t.getTileWidth(), t.getHeight() * t.getTileHeight())));

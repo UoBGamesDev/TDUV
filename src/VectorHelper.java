@@ -18,4 +18,9 @@ public class VectorHelper {
 	float y = (float) (length * Math.sin(angle));
 	return new Vector2f(x, y);
     }
+    
+    public static Vector2f zero()
+    {
+    	return new Vector2f(0,0);
+    }
 }
