@@ -21,7 +21,16 @@ public class Main extends BasicGame {
 	Player c = new Player();
 
 	entityManager.addEntity(c);
-
+	
+	Enemy e = new Enemy();
+	AIBehaviorComponent AIEnemy = e.getComponent(AIBehaviorComponent.class);
+	AIEnemy.SetAIBehaviorType(AIBehaviorComponent.BehaviorType.TopDown);
+	AIEnemy.setTopOrDown(true);
+	AIEnemy.setBottomLimit(150);
+	AIEnemy.setTopLimit(50);
+	AIEnemy.setSpeed(5);
+	entityManager.addEntity(e);
+	
 	TiledMap t = new TiledMap("contents/uniTest.tmx");
 
 	entityManager.addEntity(new Map(t));
